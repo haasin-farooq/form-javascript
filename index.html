@@ -12,13 +12,92 @@
     <div class="main-container">
       <div class="form-container">
         <h1 class="form-heading">Registration</h1>
-        <div class="form-grid">
+        <form class="form-grid">
           <div class="form-input-container">
-            <label class="form-input-label">Full Name</label>
-            <input type="text" class="form-input" />
+            <label for="full-name" class="form-input-label">Full Name</label>
+            <input
+              type="text"
+              name="full-name"
+              class="form-input"
+              placeholder="Enter your name"
+            />
           </div>
+          <div class="form-input-container">
+            <label for="username" class="form-input-label">Username</label>
+            <input
+              type="text"
+              name="username"
+              class="form-input"
+              placeholder="Enter your username"
+            />
+          </div>
+          <div class="form-input-container">
+            <label for="email" class="form-input-label">Email</label>
+            <input
+              type="email"
+              name="email"
+              class="form-input"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="form-input-container">
+            <label for="number" class="form-input-label">Phone Number</label>
+            <input
+              type="tel"
+              name="number"
+              class="form-input"
+              placeholder="Enter your number"
+              pattern="[0-9]{4}-[0-9]{7}"
+            />
+          </div>
+          <div class="form-input-container">
+            <label for="password" class="form-input-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              class="form-input"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="form-input-container">
+            <label for="confirm-password" class="form-input-label"
+              >Confirm Password</label
+            >
+            <input
+              type="password"
+              name="confirm-password"
+              class="form-input"
+              placeholder="Confirm your password"
+            />
+          </div>
+          <div class="form-input-container col-span-2">
+            <h3 class="form-input-label">Gender</h3>
+            <div class="form-radio-input-container-wrapper">
+              <div class="form-radio-input-container">
+                <input
+                  type="radio"
+                  name="gender"
+                  class="form-input form-radio-input"
+                  value="Male"
+                />
+                <label class="form-radio-input-label">Male</label>
+              </div>
+              <div class="form-radio-input-container ml-8px">
+                <input
+                  type="radio"
+                  name="gender"
+                  class="form-input form-radio-input"
+                  value="Female"
+                />
+                <label class="form-radio-input-label">Female</label>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="form-submit-button col-span-2">
+            Register
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   </body>
 </html>
