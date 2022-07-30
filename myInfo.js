@@ -1,6 +1,5 @@
 const getDatafromStorage = () => {
   const formData = JSON.parse(localStorage.getItem("form-data"));
-  console.log(formData);
   showDataonPage(formData);
 };
 
