@@ -1,16 +1,15 @@
-const getDatafromStorage = () => {
-  const formData = JSON.parse(localStorage.getItem("form-data"));
-  showDataonPage(formData);
+const getFormDataFromQueryParams = () => {
+  const urlParams = new URLSearchParams(document.location.search);
+  showDataonPage(urlParams);
 };
 
-const showDataonPage = (formData) => {
-  Object.entries(formData).map((field) => {
-    console.log(field);
-    const element = document.querySelector(`.${field[0]}`);
+const showDataonPage = (urlParams) => {
+  for (const p of urlParams) {
+    const element = document.querySelector(`.${p[0]}`);
     if (element) {
-      element.textContent = field[1];
+      element.textContent = p[1];
     }
-  });
+  }
 };
 
-getDatafromStorage();
+getFormDataFromQueryParams();
