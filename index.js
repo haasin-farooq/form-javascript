@@ -3,13 +3,10 @@ const handleSubmit = () => {
   const formData = {};
   for (let i = 0; i < elements.length; i++) {
     const input = elements.item(i);
-    console.log("Input", input);
     if (input) {
       formData[input.name] = input.value;
     }
   }
 
   localStorage.setItem("form-data", JSON.stringify(formData));
-
-  console.log("Form Data", formData);
 };
